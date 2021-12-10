@@ -9,7 +9,6 @@ for _ in range(N) :
   time.append(list(map(int, sys.stdin.readline().split())))
 
 time.sort(key=lambda x: (x[0], x[1]))
-
 heap.append(time[0][1])
 cnt = 1
 
