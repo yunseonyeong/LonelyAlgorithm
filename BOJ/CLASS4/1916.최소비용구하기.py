@@ -12,6 +12,7 @@ for _ in range(M):
   s,f,d = map(int, input().split())
   graph[s].append((f,d))
 
+  
 ss,sd = map(int, input().split())
 def dijkstra(s,d):
   q = []
