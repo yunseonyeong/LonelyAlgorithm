@@ -4,7 +4,7 @@ input = sys.stdin.readline
 
 N = int(input())    # 도시의 개수
 M = int(input())    # 버스의 개수
-graph = [[]*(N+1) for _ in range(N+1)]
+graph = [[] for _ in range(N+1)]
 INF = int(1e9)
 distance = [INF]*(N+1)
 
@@ -13,7 +13,6 @@ for _ in range(M):
   graph[s].append((f,d))
 
 ss,sd = map(int, input().split())
-
 def dijkstra(s,d):
   q = []
   heapq.heappush(q, (0,s))
@@ -32,3 +31,5 @@ def dijkstra(s,d):
 
 result = dijkstra(ss,sd)
 print(result)
+
+print(graph)
