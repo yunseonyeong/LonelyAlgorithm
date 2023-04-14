@@ -5,7 +5,6 @@ import heapq
 n,m = map(int, input().split())
 graph = [[] for _ in range(n+1)]
 route = [['-' for _ in range(n+1)] for _ in range(n+1)]
-answer = [['-' for _ in range(n+1)] for _ in range(n+1)]
 
 for _ in range(m):
     x,y,d = list(map(int, input().split()))
@@ -39,7 +38,6 @@ for i in range(1, n+1):
 def trace(i,j):
     r = j
     global route
-    global answer
     while True:
         if route[i][r] == r:
             return r
